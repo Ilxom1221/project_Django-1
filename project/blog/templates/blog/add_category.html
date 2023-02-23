@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+<div class="d-flex justify-content-center">
+    <div class="col-6 card p-4 bg-warning border-primary">
+        <h3 class="text-center text-light">{{ title }}</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success" type="submit">Добавить</button>
+</form>
+    </div>
+</div>
+
+
+{% endblock main %}
